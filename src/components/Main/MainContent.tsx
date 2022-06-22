@@ -2,7 +2,8 @@ import { Toolbar, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
-const MainContent = (drawerWidth: any) => {
+const MainContent = (props:any) => {
+  const {drawerWidth} = props;
   return (
     <Box
       component="main"

@@ -3,7 +3,7 @@ import React from 'react'
 
 const SideDrawer = () => {
   return (
-    <div>
+    <div className="sidedrawer">
     <Divider />
     <List>
       {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (

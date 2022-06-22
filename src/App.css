@@ -1,0 +1,8 @@
+*{
+    box-sizing: border-box;
+}
+.sidedrawer{
+    background-color: #090a0a;
+    min-height: 100%;
+    color: white;
+}

@@ -1,35 +1,25 @@
-import { Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import { Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material'
 import React from 'react'
 
 const SideDrawer = () => {
   return (
     <div className="sidedrawer">
-    <Divider />
+    <Typography variant="h3" sx={{
+      textAlign: 'center'
+    }}>Messages</Typography>
     <List>
-      {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-        <ListItem key={text} disablePadding>
-          <ListItemButton>
+      {['CJ', 'Anthony', 'Samantha', 'Dan'].map((text, index) => (
+         <ListItemButton>
+        <ListItem key={text}>
             <ListItemIcon>
              {/* icons for items go here */}
             </ListItemIcon>
             <ListItemText primary={text} />
-          </ListItemButton>
         </ListItem>
+          </ListItemButton>
       ))}
     </List>
-    <Divider />
-    <List>
-      {['All mail', 'Trash', 'Spam'].map((text, index) => (
-        <ListItem key={text} disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              {/*icons for items go here */}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItemButton>
-        </ListItem>
-      ))}
-    </List>
+  
   </div>
   )
 }

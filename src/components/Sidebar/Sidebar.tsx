@@ -8,6 +8,11 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import MainContent from "../Main/MainContent";
 import LeftDrawer from "./LeftDrawer";
+import RightDrawer from "./RightDrawer";
+
+/** 
+ * THIS IS THE MAIIN SIDE BAR COMPONENT
+*/
 
 const drawerWidth = 300;
 interface Props {
@@ -18,23 +23,23 @@ export default function ResponsiveDrawer(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  //toggle left sidebar
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
-
-
   const container =
     window !== undefined ? () => window().document.body : undefined;
-
   return (
     <Box sx={{ display: "flex", color: "white" }}>
       <CssBaseline />
       <AppBar
         position="fixed"
         sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          width: { sm: `calc(90% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          mr: { sm: `200px` },
+          backgroundColor:'violet'
         }}
       >
         <Toolbar>
@@ -59,6 +64,7 @@ export default function ResponsiveDrawer(props: Props) {
         handleDrawerToggle={handleDrawerToggle}
       />
       <MainContent drawerWidth={drawerWidth} />
+      <RightDrawer/>
     </Box>
   );
 }
